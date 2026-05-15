@@ -4,13 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clean Cut Lawn Care | Professional Lawn Maintenance</title>
-  <meta
-    name="description"
-    content="Professional lawn mowing, edging, trimming, and yard cleanup. Book your service online with Clean Cut Lawn Care."
-  />
+  <meta name="description" content="Professional lawn mowing, edging, trimming, and yard cleanup. Book your service online with Clean Cut Lawn Care." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
   <!-- Navigation -->
   <header class="hero">
     <nav class="nav container">
@@ -24,9 +23,8 @@
     <div class="hero-content container">
       <img src="logo.png" alt="Clean Cut Lawn Care Logo" class="hero-logo" />
       <h1>Professional Lawn Care You Can Count On</h1>
-      <p>
-        Reliable mowing, edging, trimming, and yard cleanup for homes and businesses.
-      </p>
+      <p>Reliable mowing, edging, trimming, and yard cleanup for homes and businesses.</p>
+
       <div class="hero-buttons">
         <a href="#booking" class="btn">Book a Service</a>
         <a href="tel:7724758733" class="btn btn-secondary">Call 772-475-8733</a>
@@ -38,15 +36,18 @@
   <section class="section">
     <div class="container">
       <h2>Our Services</h2>
+
       <div class="grid">
         <article class="card">
           <h3>Lawn Mowing</h3>
           <p>Consistent, even cuts that keep your yard looking sharp.</p>
         </article>
+
         <article class="card">
           <h3>Edging & Trimming</h3>
           <p>Clean lines along sidewalks, driveways, and flower beds.</p>
         </article>
+
         <article class="card">
           <h3>Yard Cleanup</h3>
           <p>Leaf removal and seasonal cleanup to keep your property neat.</p>
@@ -66,117 +67,56 @@
     </div>
   </section>
 
-  <!-- Booking Form -->
+  <!-- Booking -->
   <section id="booking" class="section">
     <div class="container">
       <h2>Book Your Service</h2>
+
       <p class="form-intro">
-        Complete the form below and your booking request will be sent directly
-        to our email.
+        Complete the form below and your booking request will be sent directly to our email.
       </p>
 
       <form id="bookingForm" class="booking-form">
-  <label>
-    Full Name
-    <input type="text" name="full_name" required />
-  </label>
-
-  <label>
-    Email Address
-    <input type="email" name="email" required />
-  </label>
-
-  <label>
-    Phone Number
-    <input type="tel" name="phone" required />
-  </label>
-
-  <label>
-    Service Address
-    <input type="text" name="address" required />
-  </label>
-
-  <label>
-    Requested Date
-    <input type="date" name="requested_date" required />
-  </label>
-
-  <label>
-    Services Needed
-    <textarea
-      name="services"
-      rows="4"
-      placeholder="Mowing, edging, trimming, cleanup, etc."
-      required
-    ></textarea>
-  </label>
-
-  <label>
-    Additional Notes
-    <textarea
-      name="notes"
-      rows="3"
-      placeholder="Gate code, pets, special instructions, etc."
-    ></textarea>
-  </label>
-
-  <button type="submit" class="btn">Submit Booking Request</button>
-  <p id="formMessage" style="margin-top: 10px; font-weight: bold;"></p>
-</form>
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Booking Request - Clean Cut Lawn Care"
-        />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_next" value="thank-you.html" />
 
         <label>
           Full Name
-          <input type="text" name="Full Name" required />
+          <input type="text" name="full_name" required />
         </label>
 
         <label>
           Email Address
-          <input type="email" name="Email Address" required />
+          <input type="email" name="email" required />
         </label>
 
         <label>
           Phone Number
-          <input type="tel" name="Phone Number" required />
+          <input type="tel" name="phone" required />
         </label>
 
         <label>
           Service Address
-          <input type="text" name="Service Address" required />
+          <input type="text" name="address" required />
         </label>
 
         <label>
           Requested Date
-          <input type="date" name="Requested Date" required />
+          <input type="date" name="requested_date" required />
         </label>
 
         <label>
           Services Needed
-          <textarea
-            name="Services Needed"
-            rows="4"
-            placeholder="Mowing, edging, trimming, cleanup, etc."
-            required
-          ></textarea>
+          <textarea name="services" rows="4" placeholder="Mowing, edging, trimming, cleanup, etc." required></textarea>
         </label>
 
         <label>
           Additional Notes
-          <textarea
-            name="Additional Notes"
-            rows="3"
-            placeholder="Gate code, pets, special instructions, etc."
-          ></textarea>
+          <textarea name="notes" rows="3" placeholder="Gate code, pets, special instructions, etc."></textarea>
         </label>
 
         <button type="submit" class="btn">Submit Booking Request</button>
+
+        <p id="formMessage" style="margin-top: 10px; font-weight: bold;"></p>
+
       </form>
     </div>
   </section>
@@ -186,90 +126,38 @@
     <div class="container">
       <p><strong>Clean Cut Lawn Care</strong></p>
       <p>
-        Phone:
-        <a href="tel:7724758733">772-475-8733</a>
-        |
-        Email:
-        <a href="mailto:premiumlawncare26@gmail.com">
-          premiumlawncare26@gmail.com
-        </a>
+        Phone: <a href="tel:7724758733">772-475-8733</a> |
+        Email: <a href="mailto:premiumlawncare26@gmail.com">premiumlawncare26@gmail.com</a>
       </p>
     </div>
   </footer>
+
+  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init({
-    publicKey: "YOUR_PUBLIC_KEY"
-  });
 
-  const form = document.getElementById("bookingForm");
-  const message = document.getElementById("formMessage");
+  <script>
+    emailjs.init({
+      publicKey: "YOUR_PUBLIC_KEY"
+    });
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+    const form = document.getElementById("bookingForm");
+    const message = document.getElementById("formMessage");
 
-    message.textContent = "Sending your booking request...";
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
-      .then(() => {
-        message.textContent =
-          "Thank you! Your booking request has been sent successfully.";
-        form.reset();
-      })
-      .catch(() => {
-        message.textContent =
-          "There was a problem sending your request. Please try again.";
-      });
-  });
-</script>
+      message.textContent = "Sending your booking request...";
+
+      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
+        .then(() => {
+          message.textContent = "Thank you! Your booking request has been sent successfully.";
+          form.reset();
+        })
+        .catch(() => {
+          message.textContent = "There was a problem sending your request. Please try again.";
+        });
+    });
+  </script>
+
 </body>
 </html>
-<form id="bookingForm" class="booking-form">
-  <label>
-    Full Name
-    <input type="text" name="full_name" required />
-  </label>
-
-  <label>
-    Email Address
-    <input type="email" name="email" required />
-  </label>
-
-  <label>
-    Phone Number
-    <input type="tel" name="phone" required />
-  </label>
-
-  <label>
-    Service Address
-    <input type="text" name="address" required />
-  </label>
-
-  <label>
-    Requested Date
-    <input type="date" name="requested_date" required />
-  </label>
-
-  <label>
-    Services Needed
-    <textarea
-      name="services"
-      rows="4"
-      placeholder="Mowing, edging, trimming, cleanup, etc."
-      required
-    ></textarea>
-  </label>
-
-  <label>
-    Additional Notes
-    <textarea
-      name="notes"
-      rows="3"
-      placeholder="Gate code, pets, special instructions, etc."
-    ></textarea>
-  </label>
-
-  <button type="submit" class="btn">Submit Booking Request</button>
-  <p id="formMessage" style="margin-top: 10px; font-weight: bold;"></p>
-</form>

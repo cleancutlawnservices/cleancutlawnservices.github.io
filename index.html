@@ -196,6 +196,33 @@
       </p>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init({
+    publicKey: "YOUR_PUBLIC_KEY"
+  });
+
+  const form = document.getElementById("bookingForm");
+  const message = document.getElementById("formMessage");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    message.textContent = "Sending your booking request...";
+
+    emailjs
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
+      .then(() => {
+        message.textContent =
+          "Thank you! Your booking request has been sent successfully.";
+        form.reset();
+      })
+      .catch(() => {
+        message.textContent =
+          "There was a problem sending your request. Please try again.";
+      });
+  });
+</script>
 </body>
 </html>
 <form id="bookingForm" class="booking-form">

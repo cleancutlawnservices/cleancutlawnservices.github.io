@@ -137,7 +137,7 @@
 
   <script>
     emailjs.init({
-      publicKey: "YOUR_PUBLIC_KEY"
+      publicKey: "XZbTE1ShFmrlQ4Wzo"
     });
 
     const form = document.getElementById("bookingForm");
@@ -148,7 +148,7 @@
 
       message.textContent = "Sending your booking request...";
 
-      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
+      emailjs.sendForm("service_9sxwjwc", "template_w9piuzm", form)
         .then(() => {
           message.textContent = "Thank you! Your booking request has been sent successfully.";
           form.reset();

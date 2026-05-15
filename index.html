@@ -1,72 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clean Cut Lawn Care</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Cut Lawn Care | Professional Lawn Maintenance</title>
+  <meta
+    name="description"
+    content="Professional lawn mowing, edging, trimming, and yard cleanup. Book your service online with Clean Cut Lawn Care."
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navigation -->
   <header class="hero">
-    <div class="container">
-      <img src="logo.png" alt="Clean Cut Lawn Care Logo" class="logo">
+    <nav class="nav container">
+      <div class="brand">
+        <img src="logo.png" alt="Clean Cut Lawn Care Logo" class="nav-logo" />
+        <span>Clean Cut Lawn Care</span>
+      </div>
+      <a href="#booking" class="btn btn-small">Book Now</a>
+    </nav>
+
+    <div class="hero-content container">
+      <img src="logo.png" alt="Clean Cut Lawn Care Logo" class="hero-logo" />
       <h1>Professional Lawn Care You Can Count On</h1>
-      <p>Mowing, edging, trimming, and dependable service for your property.</p>
-      <a href="#booking" class="btn">Book a Service</a>
+      <p>
+        Reliable mowing, edging, trimming, and yard cleanup for homes and businesses.
+      </p>
+      <div class="hero-buttons">
+        <a href="#booking" class="btn">Book a Service</a>
+        <a href="tel:7724758733" class="btn btn-secondary">Call 772-475-8733</a>
+      </div>
     </div>
   </header>
 
+  <!-- Services -->
   <section class="section">
     <div class="container">
       <h2>Our Services</h2>
       <div class="grid">
-        <div class="card"><h3>Lawn Mowing</h3><p>Clean and consistent cuts every visit.</p></div>
-        <div class="card"><h3>Edging & Trimming</h3><p>Sharp edges and detailed finishing.</p></div>
-        <div class="card"><h3>Yard Cleanup</h3><p>Leaf removal and seasonal cleanup.</p></div>
+        <article class="card">
+          <h3>Lawn Mowing</h3>
+          <p>Consistent, even cuts that keep your yard looking sharp.</p>
+        </article>
+        <article class="card">
+          <h3>Edging & Trimming</h3>
+          <p>Clean lines along sidewalks, driveways, and flower beds.</p>
+        </article>
+        <article class="card">
+          <h3>Yard Cleanup</h3>
+          <p>Leaf removal and seasonal cleanup to keep your property neat.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section alt">
+  <!-- About -->
+  <section class="section section-alt">
     <div class="container">
-      <h2>Why Choose Clean Cut Lawn Care?</h2>
-      <p>We provide reliable, affordable lawn care with attention to detail and friendly customer service.</p>
+      <h2>Why Choose Us?</h2>
+      <p class="about-text">
+        Clean Cut Lawn Care is committed to dependable service, fair pricing,
+        and attention to detail. We treat every yard like it is our own.
+      </p>
     </div>
   </section>
 
+  <!-- Booking Form -->
   <section id="booking" class="section">
     <div class="container">
       <h2>Book Your Service</h2>
-      <p>Fill out the form below and your request will be sent directly to our email.</p>
+      <p class="form-intro">
+        Complete the form below and your booking request will be sent directly
+        to our email.
+      </p>
 
-      <!-- Replace the email below if needed -->
-      <form action="https://formsubmit.co/premiumlawncare26@gmail.com" method="POST" class="booking-form">
-        <input type="hidden" name="_subject" value="New Booking Request - Clean Cut Lawn Care">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+      <form
+        class="booking-form"
+        action="https://formsubmit.co/premiumlawncare26@gmail.com"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Booking Request - Clean Cut Lawn Care"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="thank-you.html" />
 
-        <label>Full Name
-          <input type="text" name="Full Name" required>
+        <label>
+          Full Name
+          <input type="text" name="Full Name" required />
         </label>
 
-        <label>Email Address
-          <input type="email" name="Email" required>
+        <label>
+          Email Address
+          <input type="email" name="Email Address" required />
         </label>
 
-        <label>Phone Number
-          <input type="tel" name="Phone Number" required>
+        <label>
+          Phone Number
+          <input type="tel" name="Phone Number" required />
         </label>
 
-        <label>Service Address
-          <input type="text" name="Service Address" required>
+        <label>
+          Service Address
+          <input type="text" name="Service Address" required />
         </label>
 
-        <label>Requested Date
-          <input type="date" name="Requested Date" required>
+        <label>
+          Requested Date
+          <input type="date" name="Requested Date" required />
         </label>
 
-        <label>Services Needed
-          <textarea name="Services Needed" rows="4" placeholder="Mowing, edging, trimming, cleanup, etc." required></textarea>
+        <label>
+          Services Needed
+          <textarea
+            name="Services Needed"
+            rows="4"
+            placeholder="Mowing, edging, trimming, cleanup, etc."
+            required
+          ></textarea>
+        </label>
+
+        <label>
+          Additional Notes
+          <textarea
+            name="Additional Notes"
+            rows="3"
+            placeholder="Gate code, pets, special instructions, etc."
+          ></textarea>
         </label>
 
         <button type="submit" class="btn">Submit Booking Request</button>
@@ -74,10 +138,19 @@
     </div>
   </section>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <p>Clean Cut Lawn Care</p>
-      <p>Phone: 772-475-8733 | Email: premiumlawncare26@gmail.com</p>
+      <p><strong>Clean Cut Lawn Care</strong></p>
+      <p>
+        Phone:
+        <a href="tel:7724758733">772-475-8733</a>
+        |
+        Email:
+        <a href="mailto:premiumlawncare26@gmail.com">
+          premiumlawncare26@gmail.com
+        </a>
+      </p>
     </div>
   </footer>
 </body>
